@@ -1,6 +1,1 @@
-async function init(){
- const data=await fetch('data.json').then(r=>r.json());
- const app=document.getElementById('app');
- app.innerHTML=`<h2>${data.title}</h2><p>Players: ${data.players.join(' vs ')}</p>`;
-}
-init();
+async function init(){const app=document.getElementById("app");try{const data=await fetch("data.json").then(r=>r.json());app.innerHTML="";for(const t of data.tournaments){const d=document.createElement("details");d.innerHTML=`<summary>${t.name} (${t.tier})</summary><div style="padding:10px"><table><tr><th>Player</th><th>Results</th></tr><tr><td>Nakamura</td><td>${t.results.Nakamura.map(x=>x.year+': '+x.place).join('<br>')}</td></tr><tr><td>Nepomniachtchi</td><td>${t.results.Nepomniachtchi.map(x=>x.year+': '+x.place).join('<br>')}</td></tr></table></div>`;app.appendChild(d);} }catch(e){app.innerHTML='ERROR: '+e.message;console.error(e);} } init();

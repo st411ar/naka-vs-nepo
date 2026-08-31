@@ -1,37 +1,49 @@
 {
-  "title": "Chess Comparison",
-  "players": [
-    "Hikaru Nakamura",
-    "Ian Nepomniachtchi"
-  ],
   "tournaments": [
     {
-      "id": "candidates",
-      "name": "Candidates Tournament",
+      "name": "Candidates",
       "tier": "S",
       "results": {
         "Nakamura": [
           {
             "year": 2016,
-            "place": "4"
+            "place": "4th"
           },
           {
             "year": 2024,
-            "place": "2"
+            "place": "2nd"
           }
         ],
         "Nepomniachtchi": [
           {
             "year": 2021,
-            "place": "1"
+            "place": "1st"
           },
           {
             "year": 2022,
-            "place": "1"
+            "place": "1st"
           },
           {
             "year": 2024,
-            "place": "2"
+            "place": "2nd"
+          }
+        ]
+      }
+    },
+    {
+      "name": "World Cup",
+      "tier": "S",
+      "results": {
+        "Nakamura": [
+          {
+            "year": 2015,
+            "place": "QF"
+          }
+        ],
+        "Nepomniachtchi": [
+          {
+            "year": 2021,
+            "place": "4th"
           }
         ]
       }
