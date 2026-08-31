@@ -1,1 +1,1 @@
-body{font-family:Arial,sans-serif;max-width:1200px;margin:20px auto;padding:0 16px}details{margin:8px 0}.tier{margin-bottom:20px}
+body{font-family:Arial,sans-serif;max-width:1200px;margin:20px auto;padding:0 16px}details{margin:8px 0;border:1px solid #ccc}summary{padding:8px;font-weight:bold;cursor:pointer;background:#f6f6f6}pre{padding:10px;white-space:pre-wrap}

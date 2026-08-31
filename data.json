@@ -10,7 +10,7 @@
   "tournaments": [
     {
       "id": "candidates",
-      "name": "Candidates Tournament",
+      "name": "Candidates",
       "tier": "S",
       "type": "place",
       "results": {
@@ -50,7 +50,7 @@
     },
     {
       "id": "world_cup",
-      "name": "FIDE World Cup",
+      "name": "World Cup",
       "tier": "S",
       "type": "knockout",
       "results": {
@@ -58,6 +58,10 @@
           {
             "year": 2004,
             "stage": "R16"
+          },
+          {
+            "year": 2005,
+            "stage": "Early"
           },
           {
             "year": 2013,
@@ -86,6 +90,10 @@
             "stage": "R32"
           },
           {
+            "year": 2013,
+            "stage": "Early"
+          },
+          {
             "year": 2015,
             "stage": "R32"
           },
@@ -105,6 +113,26 @@
           {
             "year": 2023,
             "stage": "QF"
+          }
+        ]
+      }
+    },
+    {
+      "id": "grand_prix",
+      "name": "FIDE Grand Prix",
+      "tier": "S",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2015,
+            "place": 1
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2019,
+            "place": 1
           }
         ]
       }
@@ -168,6 +196,274 @@
         "nepo": [
           {
             "year": 2022,
+            "place": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "tal_memorial",
+      "name": "Tal Memorial",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2010,
+            "place": 4
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2016,
+            "place": 1
+          },
+          {
+            "year": 2011,
+            "place": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "london_chess_classic",
+      "name": "London Chess Classic",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2018,
+            "place": 1
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2017,
+            "place": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "dortmund",
+      "name": "Dortmund",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2011,
+            "place": 5
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2018,
+            "place": 1
+          },
+          {
+            "year": 2019,
+            "place": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "wr_chess_masters",
+      "name": "WR Chess Masters",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [],
+        "nepo": [
+          {
+            "year": 2023,
+            "place": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "zurich",
+      "name": "Zurich Chess Challenge",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2015,
+            "place": 2
+          }
+        ],
+        "nepo": []
+      }
+    },
+    {
+      "id": "gashimov",
+      "name": "Gashimov Memorial",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2014,
+            "place": 3
+          }
+        ],
+        "nepo": []
+      }
+    },
+    {
+      "id": "superbet",
+      "name": "Superbet Chess Classic",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [],
+        "nepo": [
+          {
+            "year": 2024,
+            "place": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "bilbao",
+      "name": "Bilbao Masters",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2016,
+            "place": 2
+          },
+          {
+            "year": 2011,
+            "place": 3
+          }
+        ],
+        "nepo": []
+      }
+    },
+    {
+      "id": "gibraltar",
+      "name": "Gibraltar Masters",
+      "tier": "B_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2008,
+            "place": 1
+          },
+          {
+            "year": 2015,
+            "place": 1
+          },
+          {
+            "year": 2016,
+            "place": 1
+          },
+          {
+            "year": 2017,
+            "place": 1
+          },
+          {
+            "year": 2018,
+            "place": 1
+          }
+        ],
+        "nepo": []
+      }
+    },
+    {
+      "id": "isle_of_man",
+      "name": "Isle of Man",
+      "tier": "B_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2017,
+            "place": 2
+          },
+          {
+            "year": 2018,
+            "place": 3
+          }
+        ],
+        "nepo": []
+      }
+    },
+    {
+      "id": "aeroflot",
+      "name": "Aeroflot Open",
+      "tier": "B_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [],
+        "nepo": [
+          {
+            "year": 2008,
+            "place": 1
+          },
+          {
+            "year": 2015,
+            "place": 1
+          },
+          {
+            "year": 2025,
+            "place": 1
+          },
+          {
+            "year": 2026,
+            "place": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "nationals",
+      "name": "National Championships",
+      "tier": "B_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2005,
+            "place": 1
+          },
+          {
+            "year": 2009,
+            "place": 1
+          },
+          {
+            "year": 2012,
+            "place": 1
+          },
+          {
+            "year": 2015,
+            "place": 1
+          },
+          {
+            "year": 2019,
+            "place": 1
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2010,
+            "place": 1
+          },
+          {
+            "year": 2013,
+            "place": 1
+          },
+          {
+            "year": 2020,
             "place": 1
           }
         ]
