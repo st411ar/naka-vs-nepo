@@ -1,13 +1,6 @@
-const acc = document.querySelectorAll(".accordion");
-
-acc.forEach(button => {
-    button.addEventListener("click", () => {
-        const panel = button.nextElementSibling;
-
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
-    });
-});
+async function init(){
+ const data=await fetch('data.json').then(r=>r.json());
+ const app=document.getElementById('app');
+ app.innerHTML=`<h2>${data.title}</h2><p>Players: ${data.players.join(' vs ')}</p>`;
+}
+init();

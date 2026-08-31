@@ -1,0 +1,40 @@
+{
+  "title": "Chess Comparison",
+  "players": [
+    "Hikaru Nakamura",
+    "Ian Nepomniachtchi"
+  ],
+  "tournaments": [
+    {
+      "id": "candidates",
+      "name": "Candidates Tournament",
+      "tier": "S",
+      "results": {
+        "Nakamura": [
+          {
+            "year": 2016,
+            "place": "4"
+          },
+          {
+            "year": 2024,
+            "place": "2"
+          }
+        ],
+        "Nepomniachtchi": [
+          {
+            "year": 2021,
+            "place": "1"
+          },
+          {
+            "year": 2022,
+            "place": "1"
+          },
+          {
+            "year": 2024,
+            "place": "2"
+          }
+        ]
+      }
+    }
+  ]
+}
