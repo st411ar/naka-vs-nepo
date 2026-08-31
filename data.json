@@ -1,18 +1,9 @@
 {
-  "players": {
-    "nakamura": {
-      "name": "Hikaru Nakamura"
-    },
-    "nepo": {
-      "name": "Ian Nepomniachtchi"
-    }
-  },
   "tournaments": [
     {
       "id": "world_championship_match",
       "name": "World Championship Match",
       "tier": "S",
-      "type": "place",
       "results": {
         "nakamura": [],
         "nepo": [
@@ -31,7 +22,6 @@
       "id": "candidates",
       "name": "Candidates Tournament",
       "tier": "S",
-      "type": "place",
       "results": {
         "nakamura": [
           {
@@ -40,7 +30,7 @@
           },
           {
             "year": 2022,
-            "place": 4
+            "place": 3
           },
           {
             "year": 2024,
@@ -71,7 +61,6 @@
       "id": "world_cup",
       "name": "FIDE World Cup",
       "tier": "S",
-      "type": "knockout",
       "results": {
         "nakamura": [],
         "nepo": []
@@ -81,7 +70,6 @@
       "id": "grand_swiss",
       "name": "FIDE Grand Swiss",
       "tier": "S",
-      "type": "place",
       "results": {
         "nakamura": [],
         "nepo": []
@@ -91,7 +79,6 @@
       "id": "grand_prix",
       "name": "FIDE Grand Prix",
       "tier": "S",
-      "type": "place",
       "results": {
         "nakamura": [],
         "nepo": []
@@ -100,8 +87,7 @@
     {
       "id": "tata_steel",
       "name": "Tata Steel",
-      "tier": "A_PLUS",
-      "type": "place",
+      "tier": "A+",
       "results": {
         "nakamura": [],
         "nepo": []
@@ -110,8 +96,7 @@
     {
       "id": "norway_chess",
       "name": "Norway Chess",
-      "tier": "A_PLUS",
-      "type": "place",
+      "tier": "A+",
       "results": {
         "nakamura": [],
         "nepo": []
@@ -120,178 +105,7 @@
     {
       "id": "sinquefield_cup",
       "name": "Sinquefield Cup",
-      "tier": "A_PLUS",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "tal_memorial",
-      "name": "Tal Memorial",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "london_chess_classic",
-      "name": "London Chess Classic",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "dortmund",
-      "name": "Dortmund Sparkassen Chess Meeting",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "wr_chess_masters",
-      "name": "WR Chess Masters",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "zurich_chess_challenge",
-      "name": "Zurich Chess Challenge",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "gashimov_memorial",
-      "name": "Gashimov Memorial",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "superbet_chess_classic",
-      "name": "Superbet Chess Classic",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "bilbao_masters",
-      "name": "Bilbao Masters",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "gibraltar_masters",
-      "name": "Gibraltar Masters",
-      "tier": "B_PLUS",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "isle_of_man",
-      "name": "Isle of Man",
-      "tier": "B_PLUS",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "aeroflot_open",
-      "name": "Aeroflot Open",
-      "tier": "B_PLUS",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "us_championship",
-      "name": "U.S. Championship",
-      "tier": "B_PLUS",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "russian_superfinal",
-      "name": "Russian Championship Superfinal",
-      "tier": "B_PLUS",
-      "type": "place",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "olympiad_team",
-      "name": "Chess Olympiad (Team)",
-      "tier": "TEAM_S",
-      "type": "medals",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "olympiad_individual",
-      "name": "Chess Olympiad (Individual)",
-      "tier": "TEAM_S",
-      "type": "medals",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "world_team_team",
-      "name": "World Team Championship (Team)",
-      "tier": "TEAM_S",
-      "type": "medals",
-      "results": {
-        "nakamura": [],
-        "nepo": []
-      }
-    },
-    {
-      "id": "world_team_individual",
-      "name": "World Team Championship (Individual)",
-      "tier": "TEAM_S",
-      "type": "medals",
+      "tier": "A+",
       "results": {
         "nakamura": [],
         "nepo": []

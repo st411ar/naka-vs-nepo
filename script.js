@@ -1,17 +1,1 @@
-async function init(){
- const data=await fetch('data.json').then(r=>r.json());
- const app=document.getElementById('app');
- for(const t of data.tournaments){
-  const d=document.createElement('details');
-  const n=t.results.nakamura.length;
-  const p=t.results.nepo.length;
-  d.innerHTML=`<summary>${t.name} (${t.tier})</summary>
-  <table>
-  <tr><th>Показатель</th><th>Накамура</th><th>Непомнящий</th></tr>
-  <tr><td>Участий</td><td>${n}</td><td>${p}</td></tr>
-  </table>
-  <pre>${JSON.stringify(t.results,null,2)}</pre>`;
-  app.appendChild(d);
- }
-}
-init();
+function stats(arr){const s={apps:arr.length};for(let i=1;i<=5;i++)s[i]=arr.filter(x=>x.place===i).length;let best='—';if(arr.length){best=Math.min(...arr.filter(x=>x.place).map(x=>x.place));best={1:'🥇',2:'🥈',3:'🥉'}[best]||best+' место';}s.best=best;return s;} async function init(){const data=await fetch('data.json').then(r=>r.json());const app=document.getElementById('app');const tiers=[...new Set(data.tournaments.map(t=>t.tier))];for(const tier of tiers){const wrap=document.createElement('details');wrap.className='tier';wrap.open=tier==='S';wrap.innerHTML='<summary>Tier '+tier+'</summary>';for(const t of data.tournaments.filter(x=>x.tier===tier)){const d=document.createElement('details');const ns=stats(t.results.nakamura);const ps=stats(t.results.nepo);let html=`<summary>${t.name}</summary>`;if(ns.apps===0&&ps.apps===0){html+=`<div class="nodata">Данные пока не добавлены.</div>`;}else{html+=`<table><tr><th>Показатель</th><th>Накамура</th><th>Непомнящий</th></tr><tr><td>Участий</td><td>${ns.apps}</td><td>${ps.apps}</td></tr><tr><td>🥇 1 место</td><td>${ns[1]}</td><td>${ps[1]}</td></tr><tr><td>🥈 2 место</td><td>${ns[2]}</td><td>${ps[2]}</td></tr><tr><td>🥉 3 место</td><td>${ns[3]}</td><td>${ps[3]}</td></tr><tr><td>4 место</td><td>${ns[4]}</td><td>${ps[4]}</td></tr><tr><td>5 место</td><td>${ns[5]}</td><td>${ps[5]}</td></tr><tr><td>Лучший результат</td><td>${ns.best}</td><td>${ps.best}</td></tr></table>`;}d.innerHTML=html;wrap.appendChild(d);}app.appendChild(wrap);} } init();
