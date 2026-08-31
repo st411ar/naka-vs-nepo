@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.accordion {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.panel {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+pre {
+    white-space: pre-wrap;
+}
