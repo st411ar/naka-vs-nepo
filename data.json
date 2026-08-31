@@ -7,28 +7,6 @@
       "name": "Ian Nepomniachtchi"
     }
   },
-  "tiers": [
-    {
-      "id": "S",
-      "name": "S Tier"
-    },
-    {
-      "id": "A_PLUS",
-      "name": "A+ Tier"
-    },
-    {
-      "id": "A",
-      "name": "A Tier"
-    },
-    {
-      "id": "B_PLUS",
-      "name": "B+ Tier"
-    },
-    {
-      "id": "TEAM",
-      "name": "Team"
-    }
-  ],
   "tournaments": [
     {
       "id": "candidates",
@@ -36,8 +14,163 @@
       "tier": "S",
       "type": "place",
       "results": {
-        "nakamura": [],
-        "nepo": []
+        "nakamura": [
+          {
+            "year": 2016,
+            "place": 4
+          },
+          {
+            "year": 2022,
+            "place": 4
+          },
+          {
+            "year": 2024,
+            "place": 2
+          },
+          {
+            "year": 2026,
+            "place": 5
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2021,
+            "place": 1
+          },
+          {
+            "year": 2022,
+            "place": 1
+          },
+          {
+            "year": 2024,
+            "place": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": "world_cup",
+      "name": "FIDE World Cup",
+      "tier": "S",
+      "type": "knockout",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2004,
+            "stage": "R16"
+          },
+          {
+            "year": 2013,
+            "stage": "R16"
+          },
+          {
+            "year": 2015,
+            "stage": "QF"
+          },
+          {
+            "year": 2017,
+            "stage": "R32"
+          },
+          {
+            "year": 2019,
+            "stage": "R64"
+          },
+          {
+            "year": 2023,
+            "stage": "R32"
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2011,
+            "stage": "R32"
+          },
+          {
+            "year": 2015,
+            "stage": "R32"
+          },
+          {
+            "year": 2017,
+            "stage": "R32"
+          },
+          {
+            "year": 2019,
+            "stage": "R16"
+          },
+          {
+            "year": 2021,
+            "stage": "SF",
+            "place": 4
+          },
+          {
+            "year": 2023,
+            "stage": "QF"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tata_steel",
+      "name": "Tata Steel",
+      "tier": "A_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2011,
+            "place": 1
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2019,
+            "place": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": "norway_chess",
+      "name": "Norway Chess",
+      "tier": "A_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2023,
+            "place": 1
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2021,
+            "place": 4
+          }
+        ]
+      }
+    },
+    {
+      "id": "sinquefield_cup",
+      "name": "Sinquefield Cup",
+      "tier": "A_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [
+          {
+            "year": 2013,
+            "place": 2
+          },
+          {
+            "year": 2015,
+            "place": 2
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2022,
+            "place": 1
+          }
+        ]
       }
     }
   ]
