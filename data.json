@@ -9,8 +9,27 @@
   },
   "tournaments": [
     {
+      "id": "world_championship_match",
+      "name": "World Championship Match",
+      "tier": "S",
+      "type": "place",
+      "results": {
+        "nakamura": [],
+        "nepo": [
+          {
+            "year": 2021,
+            "place": 2
+          },
+          {
+            "year": 2023,
+            "place": 2
+          }
+        ]
+      }
+    },
+    {
       "id": "candidates",
-      "name": "Candidates",
+      "name": "Candidates Tournament",
       "tier": "S",
       "type": "place",
       "results": {
@@ -50,71 +69,22 @@
     },
     {
       "id": "world_cup",
-      "name": "World Cup",
+      "name": "FIDE World Cup",
       "tier": "S",
       "type": "knockout",
       "results": {
-        "nakamura": [
-          {
-            "year": 2004,
-            "stage": "R16"
-          },
-          {
-            "year": 2005,
-            "stage": "Early"
-          },
-          {
-            "year": 2013,
-            "stage": "R16"
-          },
-          {
-            "year": 2015,
-            "stage": "QF"
-          },
-          {
-            "year": 2017,
-            "stage": "R32"
-          },
-          {
-            "year": 2019,
-            "stage": "R64"
-          },
-          {
-            "year": 2023,
-            "stage": "R32"
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2011,
-            "stage": "R32"
-          },
-          {
-            "year": 2013,
-            "stage": "Early"
-          },
-          {
-            "year": 2015,
-            "stage": "R32"
-          },
-          {
-            "year": 2017,
-            "stage": "R32"
-          },
-          {
-            "year": 2019,
-            "stage": "R16"
-          },
-          {
-            "year": 2021,
-            "stage": "SF",
-            "place": 4
-          },
-          {
-            "year": 2023,
-            "stage": "QF"
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "grand_swiss",
+      "name": "FIDE Grand Swiss",
+      "tier": "S",
+      "type": "place",
+      "results": {
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
@@ -123,18 +93,8 @@
       "tier": "S",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2015,
-            "place": 1
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2019,
-            "place": 1
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
@@ -143,18 +103,8 @@
       "tier": "A_PLUS",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2011,
-            "place": 1
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2019,
-            "place": 3
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
@@ -163,18 +113,8 @@
       "tier": "A_PLUS",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2023,
-            "place": 1
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2021,
-            "place": 4
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
@@ -183,22 +123,8 @@
       "tier": "A_PLUS",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2013,
-            "place": 2
-          },
-          {
-            "year": 2015,
-            "place": 2
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2022,
-            "place": 1
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
@@ -207,22 +133,8 @@
       "tier": "A",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2010,
-            "place": 4
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2016,
-            "place": 1
-          },
-          {
-            "year": 2011,
-            "place": 3
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
@@ -231,42 +143,18 @@
       "tier": "A",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2018,
-            "place": 1
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2017,
-            "place": 1
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
       "id": "dortmund",
-      "name": "Dortmund",
+      "name": "Dortmund Sparkassen Chess Meeting",
       "tier": "A",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2011,
-            "place": 5
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2018,
-            "place": 1
-          },
-          {
-            "year": 2019,
-            "place": 2
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
       }
     },
     {
@@ -276,106 +164,56 @@
       "type": "place",
       "results": {
         "nakamura": [],
-        "nepo": [
-          {
-            "year": 2023,
-            "place": 1
-          }
-        ]
+        "nepo": []
       }
     },
     {
-      "id": "zurich",
+      "id": "zurich_chess_challenge",
       "name": "Zurich Chess Challenge",
       "tier": "A",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2015,
-            "place": 2
-          }
-        ],
+        "nakamura": [],
         "nepo": []
       }
     },
     {
-      "id": "gashimov",
+      "id": "gashimov_memorial",
       "name": "Gashimov Memorial",
       "tier": "A",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2014,
-            "place": 3
-          }
-        ],
+        "nakamura": [],
         "nepo": []
       }
     },
     {
-      "id": "superbet",
+      "id": "superbet_chess_classic",
       "name": "Superbet Chess Classic",
       "tier": "A",
       "type": "place",
       "results": {
         "nakamura": [],
-        "nepo": [
-          {
-            "year": 2024,
-            "place": 5
-          }
-        ]
-      }
-    },
-    {
-      "id": "bilbao",
-      "name": "Bilbao Masters",
-      "tier": "A",
-      "type": "place",
-      "results": {
-        "nakamura": [
-          {
-            "year": 2016,
-            "place": 2
-          },
-          {
-            "year": 2011,
-            "place": 3
-          }
-        ],
         "nepo": []
       }
     },
     {
-      "id": "gibraltar",
+      "id": "bilbao_masters",
+      "name": "Bilbao Masters",
+      "tier": "A",
+      "type": "place",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "gibraltar_masters",
       "name": "Gibraltar Masters",
       "tier": "B_PLUS",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2008,
-            "place": 1
-          },
-          {
-            "year": 2015,
-            "place": 1
-          },
-          {
-            "year": 2016,
-            "place": 1
-          },
-          {
-            "year": 2017,
-            "place": 1
-          },
-          {
-            "year": 2018,
-            "place": 1
-          }
-        ],
+        "nakamura": [],
         "nepo": []
       }
     },
@@ -385,88 +223,78 @@
       "tier": "B_PLUS",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2017,
-            "place": 2
-          },
-          {
-            "year": 2018,
-            "place": 3
-          }
-        ],
+        "nakamura": [],
         "nepo": []
       }
     },
     {
-      "id": "aeroflot",
+      "id": "aeroflot_open",
       "name": "Aeroflot Open",
       "tier": "B_PLUS",
       "type": "place",
       "results": {
         "nakamura": [],
-        "nepo": [
-          {
-            "year": 2008,
-            "place": 1
-          },
-          {
-            "year": 2015,
-            "place": 1
-          },
-          {
-            "year": 2025,
-            "place": 1
-          },
-          {
-            "year": 2026,
-            "place": 1
-          }
-        ]
+        "nepo": []
       }
     },
     {
-      "id": "nationals",
-      "name": "National Championships",
+      "id": "us_championship",
+      "name": "U.S. Championship",
       "tier": "B_PLUS",
       "type": "place",
       "results": {
-        "nakamura": [
-          {
-            "year": 2005,
-            "place": 1
-          },
-          {
-            "year": 2009,
-            "place": 1
-          },
-          {
-            "year": 2012,
-            "place": 1
-          },
-          {
-            "year": 2015,
-            "place": 1
-          },
-          {
-            "year": 2019,
-            "place": 1
-          }
-        ],
-        "nepo": [
-          {
-            "year": 2010,
-            "place": 1
-          },
-          {
-            "year": 2013,
-            "place": 1
-          },
-          {
-            "year": 2020,
-            "place": 1
-          }
-        ]
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "russian_superfinal",
+      "name": "Russian Championship Superfinal",
+      "tier": "B_PLUS",
+      "type": "place",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "olympiad_team",
+      "name": "Chess Olympiad (Team)",
+      "tier": "TEAM_S",
+      "type": "medals",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "olympiad_individual",
+      "name": "Chess Olympiad (Individual)",
+      "tier": "TEAM_S",
+      "type": "medals",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "world_team_team",
+      "name": "World Team Championship (Team)",
+      "tier": "TEAM_S",
+      "type": "medals",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "world_team_individual",
+      "name": "World Team Championship (Individual)",
+      "tier": "TEAM_S",
+      "type": "medals",
+      "results": {
+        "nakamura": [],
+        "nepo": []
       }
     }
   ]
