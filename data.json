@@ -1,24 +1,6 @@
 {
   "tournaments": [
     {
-      "id": "world_championship_match",
-      "name": "World Championship Match",
-      "tier": "S",
-      "results": {
-        "nakamura": [],
-        "nepo": [
-          {
-            "year": 2021,
-            "place": 2
-          },
-          {
-            "year": 2023,
-            "place": 2
-          }
-        ]
-      }
-    },
-    {
       "id": "candidates",
       "name": "Candidates Tournament",
       "tier": "S",
@@ -62,8 +44,18 @@
       "name": "FIDE World Cup",
       "tier": "S",
       "results": {
-        "nakamura": [],
-        "nepo": []
+        "nakamura": [
+          {
+            "year": 2015,
+            "place": 4
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2021,
+            "place": 4
+          }
+        ]
       }
     },
     {
@@ -71,8 +63,18 @@
       "name": "FIDE Grand Swiss",
       "tier": "S",
       "results": {
-        "nakamura": [],
-        "nepo": []
+        "nakamura": [
+          {
+            "year": 2023,
+            "place": 2
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2019,
+            "place": 2
+          }
+        ]
       }
     },
     {
@@ -80,8 +82,18 @@
       "name": "FIDE Grand Prix",
       "tier": "S",
       "results": {
-        "nakamura": [],
-        "nepo": []
+        "nakamura": [
+          {
+            "year": 2022,
+            "place": 1
+          }
+        ],
+        "nepo": [
+          {
+            "year": 2019,
+            "place": 2
+          }
+        ]
       }
     },
     {
@@ -106,6 +118,141 @@
       "id": "sinquefield_cup",
       "name": "Sinquefield Cup",
       "tier": "A+",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "tal_memorial",
+      "name": "Tal Memorial",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "london_chess_classic",
+      "name": "London Chess Classic",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "dortmund",
+      "name": "Dortmund Sparkassen Chess Meeting",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "wr_chess_masters",
+      "name": "WR Chess Masters",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "zurich",
+      "name": "Zurich Chess Challenge",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "gashimov",
+      "name": "Gashimov Memorial",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "superbet",
+      "name": "Superbet Chess Classic",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "bilbao",
+      "name": "Bilbao Masters",
+      "tier": "A",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "gibraltar",
+      "name": "Gibraltar Masters",
+      "tier": "B+",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "isleofman",
+      "name": "Isle of Man",
+      "tier": "B+",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "aeroflot",
+      "name": "Aeroflot Open",
+      "tier": "B+",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "usch",
+      "name": "U.S. Championship",
+      "tier": "B+",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "rus",
+      "name": "Russian Superfinal",
+      "tier": "B+",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "olympiad",
+      "name": "Chess Olympiad",
+      "tier": "TEAM S",
+      "results": {
+        "nakamura": [],
+        "nepo": []
+      }
+    },
+    {
+      "id": "wtc",
+      "name": "World Team Championship",
+      "tier": "TEAM S",
       "results": {
         "nakamura": [],
         "nepo": []
