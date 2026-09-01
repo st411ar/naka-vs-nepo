@@ -86,15 +86,12 @@ function createDetails(title, metaText) {
     const summary = document.createElement('summary');
     const titleWrap = document.createElement('span');
     const titleElement = document.createElement('span');
-    const meta = document.createElement('span');
     const content = document.createElement('div');
 
     titleElement.textContent = title;
-    meta.className = 'summary-meta';
-    meta.textContent = metaText;
     content.className = 'details-content';
 
-    titleWrap.append(titleElement, meta);
+    titleWrap.appendChild(titleElement);
     summary.appendChild(titleWrap);
     details.append(summary, content);
 
@@ -457,7 +454,7 @@ function appendStatRow(tbody, label, firstValue, secondValue, className = '') {
 function appendCells(row, values, tagName) {
     for (const value of values) {
         const cell = document.createElement(tagName);
-        cell.textContent = value;
+        cell.textContent = value === 0 ? '—' : value;
         row.appendChild(cell);
     }
 }

@@ -216,12 +216,6 @@ details[open] summary::after {
     content: "−";
 }
 
-.summary-meta {
-    color: var(--muted);
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
 .details-content {
     padding: 18px;
 }
@@ -299,13 +293,6 @@ details[open] summary::after {
     color: var(--muted);
 }
 
-.site-footer {
-    padding: 22px 0;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: 0.9rem;
-}
-
 @media (max-width: 680px) {
     .site-header {
         padding: 36px 0 32px;
@@ -322,13 +309,7 @@ details[open] summary::after {
     summary {
         align-items: flex-start;
     }
-
-    .summary-meta {
-        display: block;
-        margin-top: 3px;
-    }
-
-    .result-list li {
+.result-list li {
         align-items: flex-start;
     }
 }
