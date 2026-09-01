@@ -10,7 +10,9 @@ const elements = {
     timelineContainer: document.getElementById('timelineContainer'),
     comparisonContainer: document.getElementById('comparisonContainer'),
     firstPlayerSelect: document.getElementById('firstPlayerSelect'),
-    secondPlayerSelect: document.getElementById('secondPlayerSelect')
+    secondPlayerSelect: document.getElementById('secondPlayerSelect'),
+    bothParticipatedFilter: document.getElementById('bothParticipatedFilter'),
+    sameEditionFilter: document.getElementById('sameEditionFilter')
 };
 
 async function apiRequest(path) {
@@ -81,6 +83,57 @@ function getTournamentResults(tournamentId) {
         .sort((left, right) => Number(left.year) - Number(right.year));
 }
 
+function tournamentMatchesFilters(tournament) {
+    const tournamentResults = getTournamentResults(tournament.id);
+    const hasNepo = tournamentResults.some(result =>
+        result.players.some(player => player.playerId === 'nepo')
+    );
+    const hasNaka = tournamentResults.some(result =>
+        result.players.some(player => player.playerId === 'naka')
+    );
+
+    if (elements.bothParticipatedFilter.checked && !(hasNepo && hasNaka)) {
+        return false;
+    }
+
+    if (elements.sameEditionFilter.checked) {
+        if (tournament.id === 'national-championships') {
+            return false;
+        }
+
+        const playedSameEdition = tournamentResults.some(result => {
+            const playerIds = new Set(result.players.map(player => player.playerId));
+            return playerIds.has('nepo') && playerIds.has('naka');
+        });
+
+        if (!playedSameEdition) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function getFilteredTournaments() {
+    return tournaments.filter(tournamentMatchesFilters);
+}
+
+function getVisibleTournamentResults(tournamentId) {
+    const tournamentResults = getTournamentResults(tournamentId);
+
+    if (!elements.sameEditionFilter.checked) {
+        return tournamentResults;
+    }
+
+    return tournamentResults.filter(result => {
+        const playerIds = new Set(
+            result.players.map(player => player.playerId)
+        );
+
+        return playerIds.has('nepo') && playerIds.has('naka');
+    });
+}
+
 function createDetails(title, metaText) {
     const details = document.createElement('details');
     const summary = document.createElement('summary');
@@ -101,8 +154,8 @@ function createDetails(title, metaText) {
 function renderTimeline() {
     elements.timelineContainer.innerHTML = '';
 
-    for (const tournament of tournaments) {
-        const tournamentResults = getTournamentResults(tournament.id);
+    for (const tournament of getFilteredTournaments()) {
+        const tournamentResults = getVisibleTournamentResults(tournament.id);
         const yearsLabel = tournamentResults.length === 1
             ? '1 проведение'
             : `${tournamentResults.length} проведений`;
@@ -202,8 +255,8 @@ function renderComparison() {
         return;
     }
 
-    for (const tournament of tournaments) {
-        const tournamentResults = getTournamentResults(tournament.id);
+    for (const tournament of getFilteredTournaments()) {
+        const tournamentResults = getVisibleTournamentResults(tournament.id);
         const format = getTournamentFormat(tournament, tournamentResults);
         const isKnockout = format === 'knockout';
         const showPodiums = format === 'standings';
@@ -461,6 +514,20 @@ function appendCells(row, values, tagName) {
 
 elements.firstPlayerSelect.addEventListener('change', renderComparison);
 elements.secondPlayerSelect.addEventListener('change', renderComparison);
+elements.bothParticipatedFilter.addEventListener('change', () => {
+    if (!elements.bothParticipatedFilter.checked) {
+        elements.sameEditionFilter.checked = false;
+    }
+    renderTimeline();
+    renderComparison();
+});
+elements.sameEditionFilter.addEventListener('change', () => {
+    if (elements.sameEditionFilter.checked) {
+        elements.bothParticipatedFilter.checked = true;
+    }
+    renderTimeline();
+    renderComparison();
+});
 
 setupTabs();
 loadData();
