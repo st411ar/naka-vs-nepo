@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nakamura vs Nepomniachtchi</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Хронология шахматных турниров и сравнение результатов игроков">
+    <title>Naka vs Nepo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h1>Nakamura vs Nepomniachtchi</h1>
-<div id="app"></div>
-<script src="script.js"></script>
+    <header class="site-header">
+        <div class="page-shell">
+            <p class="eyebrow">Шахматная статистика</p>
+            <h1>Naka vs Nepo</h1>
+            <p class="subtitle">Хронология турниров и сравнение результатов игроков</p>
+        </div>
+    </header>
+
+    <main class="page-shell">
+        <div id="statusMessage" class="status-message" role="status">Загрузка данных...</div>
+
+        <nav class="tabs" aria-label="Разделы сайта">
+            <button id="timelineTab" class="tab-button active" type="button" data-tab="timeline" aria-selected="true">
+                Хронология турниров
+            </button>
+            <button id="comparisonTab" class="tab-button" type="button" data-tab="comparison" aria-selected="false">
+                Сравнение игроков
+            </button>
+        </nav>
+
+        <section id="timelinePanel" class="tab-panel active" aria-labelledby="timelineTab">
+            <div class="section-heading">
+                <h2>Хронология турниров</h2>
+                <p>Раскройте интересующий турнир, чтобы посмотреть результаты по годам.</p>
+            </div>
+            <div id="timelineContainer" class="accordion-list"></div>
+        </section>
+
+        <section id="comparisonPanel" class="tab-panel" aria-labelledby="comparisonTab" hidden>
+            <div class="section-heading">
+                <h2>Сравнение игроков</h2>
+                <p>Выберите двух игроков и раскройте турнир для подробного сравнения.</p>
+            </div>
+
+            <div class="comparison-controls">
+                <label>
+                    <span>Первый игрок</span>
+                    <select id="firstPlayerSelect"></select>
+                </label>
+                <label>
+                    <span>Второй игрок</span>
+                    <select id="secondPlayerSelect"></select>
+                </label>
+            </div>
+
+            <div id="comparisonContainer" class="accordion-list"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-shell">Данные загружаются из Chess API.</div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
