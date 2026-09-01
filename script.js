@@ -207,12 +207,14 @@ function renderComparison() {
 
     for (const tournament of tournaments) {
         const tournamentResults = getTournamentResults(tournament.id);
-        const isCup = isCupTournament(tournament, tournamentResults);
-        const firstStats = calculateStats(tournamentResults, firstPlayerId, isCup);
-        const secondStats = calculateStats(tournamentResults, secondPlayerId, isCup);
+        const format = getTournamentFormat(tournament, tournamentResults);
+        const isKnockout = format === 'knockout';
+        const showPodiums = format === 'standings';
+        const firstStats = calculateStats(tournamentResults, firstPlayerId, showPodiums, isKnockout);
+        const secondStats = calculateStats(tournamentResults, secondPlayerId, showPodiums, isKnockout);
         const { details, content } = createDetails(
             tournament.name,
-            isCup ? 'кубковая система' : `${tournamentResults.length} проведений`
+            getFormatDescription(format, tournamentResults.length)
         );
 
         content.appendChild(createComparisonTable(
@@ -220,11 +222,34 @@ function renderComparison() {
             secondPlayerId,
             firstStats,
             secondStats,
-            isCup
+            isKnockout,
+            showPodiums
         ));
 
         elements.comparisonContainer.appendChild(details);
     }
+}
+
+function getTournamentFormat(tournament, tournamentResults) {
+    if (['standings', 'knockout', 'match'].includes(tournament.format)) {
+        return tournament.format;
+    }
+
+    return isCupTournament(tournament, tournamentResults)
+        ? 'knockout'
+        : 'standings';
+}
+
+function getFormatDescription(format, resultCount) {
+    if (format === 'knockout') {
+        return 'кубковая система';
+    }
+
+    if (format === 'match') {
+        return 'матч за титул';
+    }
+
+    return `${resultCount} проведений`;
 }
 
 function isCupTournament(tournament, tournamentResults) {
@@ -236,7 +261,7 @@ function isCupTournament(tournament, tournamentResults) {
     return nameLooksLikeCup || hasKnockoutResult;
 }
 
-function calculateStats(tournamentResults, playerId, isCup) {
+function calculateStats(tournamentResults, playerId, showPodiums, isKnockout) {
     const values = tournamentResults
         .map(result => result.players.find(player => player.playerId === playerId)?.result)
         .filter(value => value !== undefined && value !== null && String(value).trim() !== '')
@@ -254,11 +279,11 @@ function calculateStats(tournamentResults, playerId, isCup) {
 
     return {
         participations: values.length,
-        podiums: isCup
-            ? null
-            : numericPlaces.filter(place => place >= 1 && place <= 3).length,
+        podiums: showPodiums
+            ? numericPlaces.filter(place => place >= 1 && place <= 3).length
+            : null,
         frequencies,
-        bestResult: getBestResult(values, isCup)
+        bestResult: getBestResult(values, isKnockout)
     };
 }
 
@@ -322,7 +347,7 @@ function cupResultRank(value) {
     const denominator = parseKnockoutRound(value);
 
     if (denominator !== null) {
-        return 2 + Math.log2(denominator);
+        return 4 + Math.log2(denominator);
     }
 
     return Number.MAX_SAFE_INTEGER;
@@ -380,7 +405,8 @@ function createComparisonTable(
     secondPlayerId,
     firstStats,
     secondStats,
-    isCup
+    isKnockout,
+    showPodiums
 ) {
     const wrapper = document.createElement('div');
     const table = document.createElement('table');
@@ -400,11 +426,11 @@ function createComparisonTable(
     thead.appendChild(headerRow);
     appendStatRow(tbody, 'Участий', firstStats.participations, secondStats.participations);
 
-    if (!isCup) {
+    if (showPodiums) {
         appendStatRow(tbody, 'Подиумов', firstStats.podiums, secondStats.podiums);
     }
 
-    for (const row of getResultRows(firstStats, secondStats, isCup)) {
+    for (const row of getResultRows(firstStats, secondStats, isKnockout)) {
         appendStatRow(tbody, row.label, row.firstValue, row.secondValue);
     }
 
